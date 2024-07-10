@@ -1,0 +1,133 @@
+<MainScreen>:
+    MDBoxLayout:
+        orientation: "vertical"
+        
+
+        MDTopAppBar:
+            
+            elevation: 3
+            shadow_color: app.theme_cls.primary_color
+            orientation:'horizontal'
+            left_action_items: [["menu", lambda x: nav_drawer.set_state()]]
+            md_bg_color: [30/255,30/255,30/255,255/255]
+            specific_text_color: (71/255,160/255,130/255,255/255)
+            
+            
+            Image:
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                source:'small_logo.png'
+                size_hint:None,None
+                size: dp(150), dp(120)
+            Widget:
+            MDIconButton:
+                icon:"face-man-profile"
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                md_bg_color:(0.05,0.05,0.05,1)
+                
+                
+        
+        BaseScreen:
+            ScrollView:
+                MDGridLayout:
+                    
+                    adaptive_height: True
+                    cols:1
+                    padding: dp(12)
+                    spacing: dp(12)
+                    
+                    Widget:
+                    MainpageCard:
+                        height:dp(140)
+                        on_press: app.on_chevron(card_1,0,f1_image) 
+                        MDScreen:
+                            id: card_1
+                            FitImage:
+                                id: f1_image
+                                source: "f1.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(18), dp(18), dp(18), dp(18)
+                                opacity: 1
+                            
+                                
+                    Widget:  
+                    MainpageCard:
+                        height:dp(140)
+                        on_press: app.on_chevron(card_2,1,wrc_image) 
+                        MDScreen:
+                            id: card_2
+                            FitImage:
+                                id: wrc_image
+                                source: "wrc.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(18), dp(18), dp(18), dp(18)
+                                opacity: 1
+                    Widget:
+                    MainpageCard:
+                        height:dp(140)
+                        on_press: app.on_chevron(card_3,2,dakar_image) 
+                        MDScreen:
+                            id: card_3
+                            FitImage:
+                                id: dakar_image
+                                source: "dakar.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(18), dp(18), dp(18), dp(18)
+                                opacity: 1
+                    Widget:
+                    MainpageCard:
+                        height:dp(140)
+                        on_press: app.on_chevron(card_4,3,wec_image) 
+                        MDScreen:
+                            id: card_4
+                            FitImage:
+                                id: wec_image
+                                source: "wec.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(18), dp(18), dp(18), dp(18)
+                                opacity: 1
+                    Widget:
+                    
+                        
+                        
+    MDNavigationDrawer:
+        id: nav_drawer
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: dp(8)
+            padding: dp(8)
+               
+            MDList:
+                OneLineIconListItem:
+                    text: "[font=F1_font]Account[/font]"
+                    IconLeftWidget:
+                        icon: 'account'
+                OneLineIconListItem:
+                    text: "[font=F1_font]Notifications[/font]"
+                    IconLeftWidget:
+                        icon: 'bell'
+                OneLineIconListItem:
+                    text: "[font=F1_font]Auto Play[/font]"
+                    IconLeftWidget:
+                        icon: 'play'
+                OneLineIconListItem:
+                    text: "[font=F1_font]Watch on TV[/font]"
+                    IconLeftWidget:
+                        icon: 'television'
+                OneLineIconListItem:
+                    text: "[font=F1_font]Downloads[/font]"
+                    IconLeftWidget:
+                        icon: 'download'
+                OneLineIconListItem:
+                    text: "[font=F1_font]Accessibility[/font]"
+                    IconLeftWidget:
+                        icon: 'human'
+                OneLineIconListItem:
+                    text: "[font=F1_font]About[/font]"
+                    IconLeftWidget:
+                        icon: 'information'
+                    
+            Widget:

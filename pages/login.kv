@@ -1,0 +1,75 @@
+<LoginScreen>:
+    MDCard:
+        font_name: 'F1_font'
+        focus_behavior: False
+        size_hint: 0.85, 0.85
+        pos_hint: {"center_x": .5, "center_y": .5}
+        elevation: 3
+        shadow_color: app.theme_cls.primary_color
+        padding: dp(10)
+        spacing: dp(10)
+        orientation: "vertical"
+        BoxLayout:
+            
+            orientation: "vertical"
+            Image:
+                adaptive_height: True
+                source: "mainlogo.png"
+                size_hint: .6, .6
+                pos_hint: {"center_x": .5}
+                
+            
+            F1MDLabel:
+                font_name: 'F1_font_bold'
+                text: "Log In"
+                text_color: (71/255,160/255,130/255,255/255)
+                pos_hint: {"center_x": .5, "center_y": .5}
+                font_size: sp(30)
+                padding_y: dp(30)
+                
+
+            MDBoxLayout:
+            
+                font_name: 'F1_font'
+                orientation: 'vertical'
+                padding: dp(20)
+                spacing: dp(20)
+                MDTextField:
+                    font_name: 'F1_font'
+                    font_name_hint_text: 'F1_font'
+                    id: username_input
+                    hint_text: 'Username'
+                    mode: "rectangle"
+                    
+                MDTextField:
+                    font_name: 'F1_font'
+                    id: password_input
+                    hint_text: 'Password'
+                    mode: "rectangle"
+                    password: True
+                MDGridLayout:
+                    adaptive_height: True
+                    rows:1
+                    cols:4
+                    spacing: dp(10)
+                    
+                    MDFlatButton:
+                        font_name: 'F1_font'
+                        text: ' Login '
+                        on_release: app.root.get_screen('login_screen').do_login(username_input.text, password_input.text)
+                        pos_hint: {"center_x": 0, "center_y": .5}
+                        theme_text_color: "Custom"
+                        text_color:(71/255,160/255,130/255,255/255)
+                    Widget:
+                    Widget:
+                    MDFlatButton:
+                        font_name: 'F1_font'
+                        text: 'Sign Up'
+                        pos_hint: {"center_x": 1, "center_y": .5}
+                        theme_text_color: "Custom"
+                        text_color:(71/255,160/255,130/255,255/255)
+                MDRectangleFlatIconButton:
+                    icon: "gmail"
+                    text: "Log in with gmail"
+                    font_name: 'F1_font'
+                    pos_hint: {"center_x": .5, "center_y": .5}

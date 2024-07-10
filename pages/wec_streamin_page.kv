@@ -1,0 +1,208 @@
+<Wec_screen>:
+    ScrollView:
+        MDGridLayout:
+            adaptive_height: True
+            padding: dp(12)
+            spacing: dp(12)
+            cols:1
+            StreamPageTopAppBar:
+                orientation:'horizontal'
+                left_action_items: [["arrow-u-left-top-bold", lambda x: app.back()],["face-man-profile", ]]
+                md_bg_color: [50/255,50/255,50/255,255/255]
+                specific_text_color: (14/255,37/255,69/255,255/255)
+                elevation: 5
+                Image:
+                    markup: True
+                    size_hint_x: None
+                    size: dp(100), dp(48)
+                    pos_hint: {'center_x': 0.5}
+                    source:'wec_logo.png'
+            MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: 1, None
+                height: dp(200)
+                VideoPlayer:
+                    source: 'wac.mkv'
+                    height:dp(200)
+                    size_hint: 1, None
+                    allow_stretch:True
+            StreamPageCard:
+                height:dp(380)
+                padding:dp(5)
+
+                StreamPageCard:
+                    md_bg_color:(30/255,50/255,67/255,255/255)
+                    height:dp(370)
+                    MDGridLayout:
+                        cols:1
+                        padding: dp(12)
+                        spacing: dp(12)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "CLASSIFICATION"
+                            halign: 'center'
+                            font_size: sp(25)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(130)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_classification1.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(130)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_classification2.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        Widget:
+
+            StreamPageCard:
+                height:dp(1200)
+                padding:dp(5)
+
+                StreamPageCard:
+                    md_bg_color:(30/255,50/255,67/255,255/255)
+                    height:dp(1190)
+                    MDGridLayout:
+                        cols:1
+                        padding: dp(12)
+                        spacing: dp(12)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "COMPETITORS"
+                            halign: 'center'
+                            font_size: sp(25)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "HYPERCAR"
+                            halign: 'center'
+                            font_size: sp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_competitors1.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_competitors2.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_competitors3.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_competitors4.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "LMPGT3"
+                            halign: 'center'
+                            font_size: sp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_competitors5.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_competitors6.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_competitors7.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_competitors8.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        
+                        Widget:
+            StreamPageCard:
+                height:dp(600)
+                padding:dp(5)
+
+                StreamPageCard:
+                    md_bg_color:(30/255,50/255,67/255,255/255)
+                    height:dp(590)
+                    MDGridLayout:
+                        cols:1
+                        padding: dp(12)
+                        spacing: dp(12)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "TRACK DETAILS"
+                            halign: 'center'
+                            font_size: sp(25)
+                        StreamPageCard:
+                            md_bg_color:(30/255,50/255,77/255,255/255)
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(500)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_track.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        Widget:
+
+            StreamPageCard:
+                height:dp(600)
+                padding:dp(5)
+
+                StreamPageCard:
+                    md_bg_color:(30/255,50/255,67/255,255/255)
+                    height:dp(590)
+                    MDGridLayout:
+                        cols:1
+                        padding: dp(12)
+                        spacing: dp(12)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "TIMES"
+                            halign: 'center'
+                            font_size: sp(25)
+                        StreamPageCard:
+                            md_bg_color:(30/255,50/255,77/255,255/255)
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(500)
+                            radius: dp(20)
+                            FitImage:
+                                source: "wec_times.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        Widget:        
+                

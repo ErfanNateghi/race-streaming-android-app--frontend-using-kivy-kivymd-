@@ -1,0 +1,468 @@
+<StreamPage>:
+
+    ScrollView:
+        MDGridLayout:
+            adaptive_height: True
+            padding: dp(12)
+            spacing: dp(12)
+            cols:1
+            StreamPageTopAppBar:
+                orientation:'horizontal'
+                left_action_items: [["arrow-u-left-top-bold", lambda x: app.back()],["face-man-profile", ]]
+                md_bg_color: [50/255,50/255,50/255,255/255]
+                specific_text_color: (240/255,46/255,14/255,255/255)
+                elevation: 5
+                Image:
+                    markup: True
+                    size_hint_x: None
+                    size: dp(48), dp(48)
+                    pos_hint: {'center_x': 0.5}
+                    source:'car.png'
+            MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: 1, None
+                height: dp(250)
+                VideoPlayer:
+                    source: 'f1.mkv'
+                    thumbnail:'f1_thumbnail.jpg'
+                    height:dp(250)
+                    size_hint: 1, None
+                    
+                
+            StreamPageCard:
+                on_press: app.go_to_minor_pages('f1_team_detail')
+                FitImage:
+                    source: "f1_team_detail.png"
+                    size_hint_y: 1
+                    pos_hint: {"top": 1}
+                    radius: dp(50), dp(50), dp(50), dp(50)
+                    opacity: 1
+            StreamPageCard:
+                
+                on_press: app.go_to_minor_pages('f1_drivers')
+                FitImage:
+                    source: "f1_driver_status.png"
+                    size_hint_y: 1
+                    pos_hint: {"top": 1}
+                    radius: dp(50), dp(50), dp(50), dp(50)
+                    opacity: 1
+            StreamPageCard:
+                
+                on_press: app.go_to_minor_pages('f1_track_details')
+                FitImage:
+                    source: "f1_track_details.png"
+                    size_hint_y: 1
+                    pos_hint: {"top": 1}
+                    radius: dp(50), dp(50), dp(50), dp(50)
+                    opacity: 1
+            StreamPageCard:
+                height:dp(412)
+                padding: dp(6)
+                StreamPageCard:
+                    height:dp(400)
+                    adaptive_height: True
+                    md_bg_color:(39/255,60/255,77/255,255/255)
+                    F1MDLabel:
+                        font_name: 'F1_font_bold'
+                        text: "GRID"
+                        font_size: sp(30)
+                        padding_y: dp(20)
+                        
+                    MDList:
+                        adaptive_height: True
+                        padding: dp(10), dp(10), dp(10), dp(10)
+                        spacing: dp(10)
+                        StreamPageCard:
+                            on_press: app.go_to_minor_pages('f1_drivers')
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_grid_1.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                                opacity: 1
+                        StreamPageCard:
+                            on_press: app.go_to_minor_pages('f1_drivers')
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_grid_2.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                                opacity: 1
+                        StreamPageCard:
+                            on_press: app.go_to_minor_pages('f1_drivers')
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_grid_3.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                                opacity: 1
+                        StreamPageCard:
+                            on_press: app.go_to_minor_pages('f1_drivers')
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_grid_4.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                                opacity: 1
+                        StreamPageCard:
+                            on_press: app.go_to_minor_pages('f1_drivers')
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_grid_5.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                                opacity: 1
+                        StreamPageCard:
+                            on_press: app.go_to_minor_pages('f1_drivers')
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_grid_6.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                                opacity: 1
+                    Widget:
+
+
+            
+<F1TeamDetailsScreen>:
+    ScrollView:
+        BoxLayout:
+            orientation: 'vertical'
+            adaptive_height: True
+            padding: dp(12)
+            spacing: dp(12)
+            MDFloatingActionButton:
+                icon:'arrow-down-bold'
+                on_release: app.back_to_racepage('streampage_f1')
+                pos_hint:{"center_x": .5, "center_y": .5}
+            StreamPageCard:
+                height:dp(490)
+                adaptive_height: True
+                padding: dp(6)
+                StreamPageCard:
+                    height:dp(480)
+                    adaptive_height: True
+                    md_bg_color:(39/255,60/255,77/255,255/255)
+                    F1MDLabel:
+                        font_name: 'F1_font_bold'
+                        text: "TEAMS"
+                        font_size: sp(30)
+                        padding_y: dp(20)
+                        
+                    MDList:
+                        adaptive_height: True
+                        padding: dp(10), dp(10), dp(10), dp(10)
+                        spacing: dp(10)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('team_f1_1')
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_team_1.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                        StreamPageCard:
+                            
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_team_2.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                        StreamPageCard:
+                            
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_team_3.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                        StreamPageCard:
+                            
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_team_4.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                        StreamPageCard:
+                            
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_team_5.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                        StreamPageCard:
+                            
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_team_6.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                        StreamPageCard:
+                            
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_team_7.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                        StreamPageCard:
+                            
+                            height:dp(35)
+                            radius: dp(10), dp(10), dp(10), dp(10)
+                            FitImage:
+                                source: "f1_team_8.png"
+                                size_hint_y: 1
+                                pos_hint: {"top": 1}
+                                radius: dp(10), dp(10), dp(10), dp(10)
+                        
+                    Widget:
+
+
+
+<Team_f1_1_screen>:
+    ScrollView:
+        MDGridLayout:
+            cols:1
+            adaptive_height: True
+            padding: dp(12)
+            spacing: dp(12)
+            StreamPageCard:
+                md_bg_color:(18/255,18/255,18/255,255/255)
+                height: dp(60)
+                MDFloatingActionButton:
+                    adaptive_height: True
+                    icon:'arrow-down-bold'
+                    on_release: app.back_to_racepage('f1_team_detail')
+                    pos_hint:{"center_x": .5, "center_y": .5}
+                
+
+            StreamPageCard:
+                adaptive_height: True
+                radius: dp(55)
+                height:dp(100)
+                FitImage:
+                    source: "f1_aston_martin.png"
+                    size_hint_y: 1
+                    pos_hint: {"top": 1}
+                    radius: dp(55)
+            MDGridLayout:
+                cols:1
+                adaptive_height: True
+                padding: dp(1)
+                spacing: dp(1)
+                StreamPageCard:
+                    radius: dp(55),dp(55),0,0
+                    md_bg_color:(2/255,45/255,38/255,255/255)
+                    height:dp(300)
+                    padding:dp(20)
+                    F1MDLabel:
+                        font_name: 'F1_font'
+                        text: "The culmination of countless hours of work and uncompromising craft, the AMRZ4 builds on the strengths of its predecessor and applies the learnings from our most successful season to date. "
+                    F1MDLabel:
+                        font_name: 'F1_font'
+                        text: "DRIVER: Fernando Alonso"
+                    F1MDLabel:
+                        text: "ENGINE: MercedeAMG "
+                        theme_text_color: "Custom"
+                    F1MDLabel:
+                        text: "POINTS: 125"
+                        text_color: 'orange'
+                        font_size: sp(25)
+                        padding_y: dp(30)
+
+                    Widget:
+
+                StreamPageCard:
+                    radius: 0,0,0,0
+                    md_bg_color:(2/255,45/255,38/255,255/255)
+                    height:dp(330)
+                    F1MDLabel:
+                        font_name: 'F1_font_bold'
+                        text: "DRIVERS"
+                        font_size: sp(25)
+                        padding_y: dp(30)
+                    StreamPageCard:
+                        md_bg_color:(2/255,45/255,38/255,255/255)
+                        FitImage:
+                            source: "f1_aston_martin_team.png"
+                    Widget:
+                StreamPageCard:
+                    radius: 0,0,dp(55),dp(55)
+                    md_bg_color:(2/255,45/255,38/255,255/255)
+                    height:dp(250)
+
+                    F1MDLabel:
+                        font_name: 'F1_font_bold'
+                        text: "GALLERY"
+                        font_size: sp(25)
+                    StreamPageCard:
+                        padding:dp(20)
+                        md_bg_color:(2/255,45/255,38/255,255/255)
+                        FitImage:
+                            source: "f1_team_gallery1.png"
+                            size_hint: 1,1
+                            radius:dp(10)
+                            
+                    Widget:    
+                    
+            Widget:
+
+
+<F1DriversScreen>:
+    ScrollView:
+        MDGridLayout:
+            cols:1
+            adaptive_height: True
+            padding: dp(12)
+            spacing: dp(12)
+            StreamPageCard:
+                md_bg_color:(18/255,18/255,18/255,255/255)
+                height: dp(60)
+                MDFloatingActionButton:
+                    adaptive_height: True
+                    icon:'arrow-down-bold'
+                    on_release: app.back_to_racepage('streampage_f1')
+                    pos_hint:{"center_x": .5, "center_y": .5}
+                
+
+            StreamPageCard:
+                adaptive_height: True
+                radius: dp(55)
+                height:dp(100)
+                FitImage:
+                    source: "f1_fernando1.png"
+                    size_hint_y: 1
+                    pos_hint: {"top": 1}
+                    radius: dp(55)
+            MDGridLayout:
+                cols:1
+                adaptive_height: True
+                padding: dp(1)
+                spacing: dp(1)
+                StreamPageCard:
+                    radius: dp(55),dp(55),0,0
+                    height:dp(450)
+                    FitImage:
+                        source: "f1_fernando2.png"
+                        size_hint:1,1
+                        pos_hint: {"top": 1}
+                        radius: dp(55),dp(55),0,0
+                        
+                StreamPageCard:
+                    radius: 0,0,0,0
+                    height:dp(330)
+                    FitImage:
+                        source: "f1_fernando3.png"
+                        size_hint:1,1
+                        
+                StreamPageCard:
+                    radius: 0,0,dp(55),dp(55)
+                    height:dp(300)
+                    md_bg_color:(0/255,18/255,14/255,255/255)
+                    F1MDLabel:
+                        font_name: 'F1_font_bold'
+                        text: "GALLERY"
+                        font_size: sp(25)
+                    StreamPageCard:
+                        padding:dp(10)
+                        spacing:dp(10)
+                        md_bg_color:(0/255,18/255,14/255,255/255)
+                        height: dp(200)
+                        FitImage:
+                            source: "f1_fernando4.png"
+                            size_hint:.9,.9
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            radius:dp(10)
+                    Widget:
+                        
+
+            Widget:
+
+
+<F1TrackDetailsScreen>:
+    ScrollView:
+        MDGridLayout:
+            cols:1
+            adaptive_height: True
+            padding: dp(12)
+            spacing: dp(12)
+            StreamPageCard:
+                md_bg_color:(18/255,18/255,18/255,255/255)
+                height: dp(60)
+                MDFloatingActionButton:
+                    adaptive_height: True
+                    icon:'arrow-down-bold'
+                    on_release: app.back_to_racepage('streampage_f1')
+                    pos_hint:{"center_x": .5, "center_y": .5}
+            
+
+            MDGridLayout:
+                cols:1
+                adaptive_height: True
+                padding: dp(1)
+                spacing: dp(1)
+                StreamPageCard:
+                    radius: dp(55),dp(55),0,0
+                    height:dp(550)
+                    padding: dp(5)
+                    FitImage:
+                        source: "f1_track_detail.png"
+                        size_hint:1,1
+                        pos_hint: {"top": 1}
+                        radius: dp(55),dp(55),0,0
+                        
+                StreamPageCard:
+                    radius: 0,0,dp(55),dp(55)
+                    height:dp(700)
+                    md_bg_color:(25/255,39/255,50/255,255/255)
+                    F1MDLabel:
+                        font_name: 'F1_font_bold'
+                        text: "GALLERY"
+                        font_size: sp(25)
+                    StreamPageCard:
+                        padding:dp(10)
+                        spacing:dp(10)
+                        md_bg_color:(25/255,39/255,50/255,255/255)
+                        height: dp(600)
+
+                        FitImage:
+                            source: "f1_track_gallery1.png"
+                            size_hint:.9,.9
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            radius:dp(10)
+                        FitImage:
+                            source: "f1_track_gallery2.png"
+                            size_hint:.9,.9
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            radius:dp(10)
+                        FitImage:
+                            source: "f1_track_gallery3.png"
+                            size_hint:.9,.9
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            radius:dp(10)
+                            
+
+                    Widget:

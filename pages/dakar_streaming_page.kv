@@ -1,0 +1,242 @@
+<Dakar_screen>:
+    ScrollView:
+        MDGridLayout:
+            adaptive_height: True
+            padding: dp(12)
+            spacing: dp(12)
+            cols:1
+            StreamPageTopAppBar:
+                orientation:'horizontal'
+                left_action_items: [["arrow-u-left-top-bold", lambda x: app.back()],["face-man-profile", ]]
+                md_bg_color: [50/255,50/255,50/255,255/255]
+                specific_text_color: (1,1,1,255/255)
+                elevation: 5
+                Image:
+                    markup: True
+                    size_hint_x: None
+                    size: dp(100), dp(48)
+                    pos_hint: {'center_x': 0.5}
+                    source:'dakar_logo.png'
+            MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: 1, None
+                height: dp(200)
+                VideoPlayer:
+                    source: 'dakar.mkv'
+                    
+                    height:dp(200)
+                    size_hint: 1, None
+                    allow_stretch:True
+            StreamPageCard:
+                height:dp(450)
+                padding:dp(5)
+
+                StreamPageCard:
+                    md_bg_color:(30/255,50/255,67/255,255/255)
+                    height:dp(440)
+                    MDGridLayout:
+                        cols:1
+                        padding: dp(12)
+                        spacing: dp(12)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "CLASSIFICATION"
+                            halign: 'center'
+                            font_size: sp(25)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_classification_bike.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_classification_car.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_classification_truck.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        Widget:
+
+                        
+            StreamPageCard:
+                height:dp(560)
+                padding:dp(5)
+
+                StreamPageCard:
+                    md_bg_color:(30/255,50/255,67/255,255/255)
+                    height:dp(550)
+                    MDGridLayout:
+                        cols:1
+                        padding: dp(12)
+                        spacing: dp(12)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "ROUTE"
+                            halign: 'center'
+                            font_size: sp(25)
+                        StreamPageCard:
+                            md_bg_color:(30/255,50/255,77/255,255/255)
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(260)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_route1.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(90)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_route2.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(90)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_route3.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        Widget:
+            StreamPageCard:
+                height:dp(1650)
+                padding:dp(5)
+
+                StreamPageCard:
+                    md_bg_color:(30/255,50/255,67/255,255/255)
+                    height:dp(1640)
+                    MDGridLayout:
+                        cols:1
+                        padding: dp(12)
+                        spacing: dp(12)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "COMPETITORS"
+                            halign: 'center'
+                            font_size: sp(25)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "BIKE"
+                            halign: 'center'
+                            font_size: sp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors1.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors2.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors3.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors4.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "CAR"
+                            halign: 'center'
+                            font_size: sp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors5.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors6.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors7.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors8.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        MDLabel:
+                            font_name: 'F1_font_bold'
+                            text: "TRUCK"
+                            halign: 'center'
+                            font_size: sp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors9.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors10.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors11.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        StreamPageCard:
+                            on_release: app.go_to_minor_pages('demo_screen')
+                            height:dp(110)
+                            radius: dp(20)
+                            FitImage:
+                                source: "dakar_competitors12.png"
+                                size_hint_y: 1
+                                radius: dp(20)
+                        Widget:
